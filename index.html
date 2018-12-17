@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>MyApp</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+        <!-- Custom CSS -->
+        <!-- <link rel="stylesheet" href="assets/css/app.css" type="text/css"> -->
+    </head>
+    <body style="background-color:gainsboro" ng-controller="londonCtrl">
+        <!-- Page Header -->
+        <!-- <header id="navigation-bar">
+                <div class="..." ng-click="navCollapsed = true">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ui-sref="protected/welcome">private page</a></li>
+                        <li><a ui-sref="help-general">Help</a></li>
+                        <li><a ui-sref="sign-up">Register</a></li>
+                        <li><a ui-sref="log-in">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header> -->
+        <div id="wrapper" style="padding:50px;">
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-6" style="padding:30px;background-color: white">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-users"></i>&nbsp;&nbsp;Choose number of people</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                              <tr>
+                                <th scope="col"><i class="fa fa-bed"></i>&nbsp;&nbsp;Rooms</th>
+                                <th scope="col" ><button ng-click="roomsMinus()" ng-disabled="roomscount1"><i  style="color:red"class="fas fa-minus-circle"></i></button>&nbsp;&nbsp;{{roomscount}}&nbsp;&nbsp;<button ng-click="roomsPlus()" ng-disabled="roomscount5" ><i  style="color:royalblue"class="fas fa-plus-circle"></i></button></th>
+                                
+                            </tr>
+                          <tr>
+                                <th scope="col"><i class="fas fa-user-alt"></i>&nbsp;&nbsp;Adults</th>
+                                <th scope="col" ><button ng-click="adultMinus()" ng-disabled="adultcount1"><i  style="color:red"class="fas fa-minus-circle"></i></button>&nbsp;&nbsp;{{adultcount}}&nbsp;&nbsp;<button ng-click="adultPlus()" ng-disabled="adultcount5" ><i  style="color:royalblue"class="fas fa-plus-circle"></i></button></th>
+                                
+                          </tr>
+                          <tr>
+                                <th scope="col"><i class="fas fa-child"></i>&nbsp;&nbsp;Child</th>
+                                <th scope="col"><button ng-click="childMinus()" ng-disabled="childcount1"><i  style="color:red"class="fas fa-minus-circle"></i></button>&nbsp;&nbsp;{{childcount}}&nbsp;&nbsp;<button ng-click="childPlus()" ng-disabled="childcount5" ><i  style="color:royalblue"class="fas fa-plus-circle"></i></button></th>
+                                
+                          </tr>
+                          </tbody>
+                          </table>
+                          </div>
+        </div>
+        </div>
+        </div>
+        <!-- Page Body -->
+        
+
+        <!-- AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+        <!-- Angular UI Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.2/ui-bootstrap-tpls.min.js"></script>
+
+        <!--  Application JavaScript files -->
+        <script>
+        var app = angular.module("myApp", ['ngRoute']);
+        </script>
+       
+
+        <!-- JavaScripts for Login page -->
+        <script src="controller.js"></script>
+    </body>
+</html>
